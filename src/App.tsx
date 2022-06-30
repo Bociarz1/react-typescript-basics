@@ -1,25 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import AdvancedProps from "./components/AdvancedProps";
+import ClassComponent from "./components/ClassComponent";
+import EventProps from "./components/EventProps";
+import StyleProps from "./components/StyleProps";
+import TipsForTyping from "./components/TipsForTyping";
+import TypingProps from "./components/TypingProps";
+
+// props for TypingProps
+const value1 = 10
+const value2 = 'number'
+
+// props for TipsForTyping
+const value = 0
+const id = 1
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <TypingProps value1={value1} value2={value2}/>
+      <AdvancedProps><>There is some JSX</> </AdvancedProps>
+      <EventProps/>
+      <StyleProps/>
+      <TipsForTyping value={value} id={id}/>
+      <ClassComponent/>
+    </>
   );
 }
 
